@@ -33,8 +33,8 @@ Compile with:
 g++ -o main editor.cpp -lncurses
 ```
 
-Compile with:
+Run with:
 
 ```bash
-g++ -o main editor.cpp -lncurses
+./main
 ```
