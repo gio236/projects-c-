@@ -31,4 +31,10 @@ Compile with:
 
 ```bash
 g++ -o main editor.cpp -lncurses
+```
 
+Compile with:
+
+```bash
+g++ -o main editor.cpp -lncurses
+```
