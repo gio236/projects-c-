@@ -24,7 +24,7 @@ This is a basic terminal-based text editor written in C++ using the `ncurses` li
 - [ ] Enable automatic scrolling when reaching bottom of the screen
 - [ ] Improve file loading (e.g., add save confirmation or line highlighting)
 - [ ] Implement syntax highlighting (optional)
-- [v] Implement insert mode behavior
+- [x] Implement insert mode behavior
 
 ## ⚙️ Usage
 
