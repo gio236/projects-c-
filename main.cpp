@@ -99,7 +99,7 @@ if(choice == "1"){ //se la scelta è 1
 			}
 		}else if(ch == KEY_RIGHT){
 			if(x < COLS - 1) x++;
-			righe[y].insert(x -1, 1, (char)ch);
+			righe[y].insert(x -1, 1, ' ');
 			move(y, x);
 		}
 
@@ -217,7 +217,7 @@ if(choice == "1"){ //se la scelta è 1
 			}
 		}else if(ch == KEY_RIGHT){
 			if(x < COLS - 1) x++;
-			righe1[y].insert(x -1, 1, (char)ch);
+			righe1[y].insert(x -1, 1, ' ');
 			move(y, x);
 		}
 
