@@ -4,7 +4,7 @@ I'm **Gioele**, a 15-year-old student currently attending an IT technical high s
 I'm passionate about **computer science**, especially **Linux** and everything related to open-source technologies.
 
 ## 🖥️ My Setup
-- 💻 Operating System: **Ubuntu** (for now 😄)
+- 💻 Operating System: **arch**
 - 🪟 Window Manager: **i3-wm**
 - 🛠️ I love experimenting with new tools, workflows, and configurations
 
