@@ -1,19 +1,9 @@
-# Hi there 👋
+# Welcome in wallchange
+this is a script write in c++
+thath helps u tu upload easily ur "rice" : wllust colorscheme style.css for waybar and your wallpaper 
 
-I'm **Gioele**, a 15-year-old student currently attending an IT technical high school (ITIS).  
-I'm passionate about **computer science**, especially **Linux** and everything related to open-source technologies.
+## Warinings
+- this script works oknly in wayland 
+- you will be changhe the path of your wallpaper in the code or use the specific option (2) thath allows u to upload ur wallpaper path
 
-## 🖥️ My Setup
-- 💻 Operating System: **arch**
-- 🪟 Window Manager: **i3-wm**
-- 🛠️ I love experimenting with new tools, workflows, and configurations
-
-## 🚀 What I Like
-- Terminal-based applications
-- Minimalist desktop environments
-- Writing code (mostly C++ for now)
-- Learning more about how systems work under the hood
-
----
-
-Thanks for stopping by!
+## Thanks for stopping by!
