@@ -5,7 +5,7 @@ I'm passionate about **computer science**, especially **Linux** and everything r
 
 ## 🖥️ My Setup
 - 💻 Operating System: **arch**
-- 🪟 Window Manager: **i3-wm**
+- 🪟 Window Manager: **sway**
 - 🛠️ I love experimenting with new tools, workflows, and configurations
 
 ## 🚀 What I Like
