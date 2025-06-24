@@ -10,7 +10,7 @@ thath helps u tu upload easily ur "rice" : wllust colorscheme style.css for wayb
 - wayland
 - g++
 - wallust
-- (optional) waybar
+- waybar
 
 ## How to use it
 compile 
