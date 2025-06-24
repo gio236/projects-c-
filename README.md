@@ -21,4 +21,14 @@ start
 ```bash
 ./main
 ```
+
+## video 
+
+<video width="480" controls>
+  <source src="./output.mp4" type="video/mp4">
+  Il tuo browser non supporta il video HTML5.
+</video>
+
+
+
 ## Thanks for stopping by!
