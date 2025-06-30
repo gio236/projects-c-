@@ -13,7 +13,6 @@ int main(){
 	string immagini;
 	string documenti;
 	string video;
-	string eseguibiliwin;
 	string compressi;
 
 	ifstream file("/home/gioele/g++/opath/config");
@@ -25,8 +24,7 @@ int main(){
 				if (i == 1) immagini = riga;
 				if (i == 2) documenti = riga;
 				if (i == 3) video = riga;
-				if (i == 4) eseguibiliwin = riga;
-				if (i == 5) compressi = riga;
+				if (i == 4) compressi = riga;
 				i++;
 			}
 			file.close();
@@ -39,7 +37,6 @@ int main(){
 		{".txt", documenti},
 		{".pdf", documenti},
 		{".mp4", video},
-		{".exe", eseguibiliwin},
 		{".gz", compressi},   //metto .gz e non .tar.gz perche la funzione extension() restituisce solo .gz  
 		{".tar", compressi}
 	};
