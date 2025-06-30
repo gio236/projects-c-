@@ -1,19 +1,27 @@
-# Hi there 👋
+# Opath
 
-I'm **Gioele**, a 15-year-old student currently attending an IT technical high school (ITIS).  
-I'm passionate about **computer science**, especially **Linux** and everything related to open-source technologies.
+this is an organizer for your file in Downloads dir , 
+**whath is supposed to do Opath ?**
+Opath can organize ur file clearly 
+is a simple organizer that read ur `config file` ; for your preferences for the name of the directory and the 
+path of your Downloads
 
-## 🖥️ My Setup
-- 💻 Operating System: **arch**
-- 🪟 Window Manager: **sway**
-- 🛠️ I love experimenting with new tools, workflows, and configurations
 
-## 🚀 What I Like
-- Terminal-based applications
-- Minimalist desktop environments
-- Writing code (mostly C++ for now)
-- Learning more about how systems work under the hood
+## how install it
+- you can download the `main.cpp` and compile it 
+- in the config file you must in the corrct order that you can see in the `config file`
+- now you can compile it and run it
 
----
+**compile it**
+
+```bash
+g++ main.cpp -o main
+```
+
+**Run it**
+
+```bash
+./main
+```
 
 Thanks for stopping by!
