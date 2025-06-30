@@ -9,7 +9,7 @@ path of your Downloads
 
 ## how install it
 - you can download the `main.cpp` and compile it 
-- in the config file you must in the corrct order that you can see in the `config file`
+- in the config file you must insert the preferences in the corrct way that you can see in the `config file`
 - now you can compile it and run it
 
 **compile it**
