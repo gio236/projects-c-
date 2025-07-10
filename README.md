@@ -37,7 +37,7 @@ brew install ncurses
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/yourusername/projects-c.git
+git clone https://github.com/gio236/projects-c.git
 cd projects-c
 git checkout little-game-in-c++
 ```
