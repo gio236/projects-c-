@@ -1,5 +1,5 @@
 #include <ncurses.h>
-#include <iostream>
+#include <unistd.h>
 
 
 /* mappa case */
@@ -28,7 +28,7 @@ int mappacase[20][40] = {
 };
 
 
-/* mappa case */
+
 
 
 int x = 1;
@@ -36,38 +36,6 @@ int y = 1;
 
 
 int ch;
-
-
-void movmentnocollision(){
-
-	ch = getch();
-
-
-	if(ch == KEY_DOWN || ch == 's'){
-		mvaddch(y, x, ' ');
-		y++;
-		mvaddch(y, x, '@');
-		refresh();
-	}else if(ch == KEY_UP || ch == 'w'){
-		mvaddch(y, x, ' ');
-		y--;
-		mvaddch(y, x, '@');
-		refresh();
-	}else if(ch == KEY_LEFT || ch == 'a'){
-		mvaddch(y, x, ' ');
-		x--;
-		mvaddch(y, x, '@');
-		refresh();
-	}else if(ch == KEY_RIGHT || ch == 'd'){
-		mvaddch(y, x, ' ');
-		x++;
-		mvaddch(y, x, '@');
-		refresh();
-		}
-	
-}
-
-
 
 /* mappa */
 int mappa [20][40] = {
@@ -93,73 +61,32 @@ int mappa [20][40] = {
     {1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
 };
 
-
-/* mvmcolmap 
- 
-if(x == 1 && y == 20){
-	system("clear");
-	x = 1;
-	y = 1;
-	mvaddch(y, x, '@');				
-	break;
-} 
-
-
- mvmcolmap */
-
-
-
-void mvmcolmapcas (){
-
-		ch = getch();
-
-			if(ch == KEY_DOWN || ch == 's'){
-			mvaddch(y, x, ' ');
-			y++;
-			if (mappacase[y][x] == 1){
-				y--;
-				mvaddch(y, x, '@');				
-			}else{
-				mvaddch(y, x, '@');
-				refresh();
-			}
-		}else if(ch == KEY_UP || ch == 'w'){
-			mvaddch(y, x, ' ');
-			y--;
-			if (mappacase[y][x] == 1){			
-				y++;
-				mvaddch(y, x, '@');
-			}else{
-				mvaddch(y, x, '@');
-				refresh();
-			}
-		}else if(ch == KEY_LEFT || ch == 'a'){
-			mvaddch(y, x, ' ');
-			x--;
-			if (mappacase[y][x] == 1){			
-				x++;
-				mvaddch(y, x, '@');
-			}else{
-				mvaddch(y, x, '@');
-				refresh();
-			}
-		}else if(ch == KEY_RIGHT || ch == 'd'){
-			mvaddch(y, x, ' ');
-			x++;
-			if(mappacase[y][x] == 1){
-				x--;
-				mvaddch(y, x, '@');
-			}else{
-				mvaddch(y, x, '@');
-				refresh();
-			}
-	  	}
-}
+int mappahouse[20][40] = {
+    {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1},
+    {1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1},
+    {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}
+};
 
 
 
-
-void mvmcolmap (){
+void mvmcolmap (int mappa[20][40]){
 
 		ch = getch();
 
@@ -196,7 +123,7 @@ void mvmcolmap (){
 		}else if(ch == KEY_RIGHT || ch == 'd'){
 			mvaddch(y, x, ' ');
 			x++;
-			if(mappa[y][x] == 1){
+			if (mappa [y][x] == 1){
 				x--;
 				mvaddch(y, x, '@');
 			}else{
@@ -206,41 +133,21 @@ void mvmcolmap (){
 	  	}
 }
 
-void labirinto(){
+void spawn(int mappa[][40]){
 for (int i = 0;i < 20; i++){
 	for (int n = 0;n < 40; n++){
 		if (mappa[i][n] == 1){
 			mvaddch(i, n, '#');
-		}else{
-			mvaddch(i, n, ' ');
-		}
-	}
-}
-
-refresh();
-
-
-}
-
-void mappacasaspawn(){
-for (int i = 0;i < 20; i++){
-	for (int n = 0;n < 40; n++){
-		if (mappacase[i][n] == 1){
-			mvaddch(i, n, '#');
-			refresh();
-		}else if (mappacase[i][n] == 3){
+		}else if (mappa [i][n] == 3){
 			mvaddch(i, n, '|');
-			refresh();
 		}else{
 			mvaddch(i, n, ' ');
-			refresh();
 		}
 	}
 }
-
-
-
 }
+
+
 
 using namespace std;
 
@@ -257,12 +164,14 @@ int main(){
 	mvaddch(y, x, '@');
 
 
-	labirinto();
+	spawn(mappa);
+	refresh();
 
 	while(true){
 
- 
-	if(x == 1 && y == 20){
+	mvmcolmap(mappa);
+
+	if(x == 1 && y == 19){
 		clear();
 		x = 1;
 		y = 1;
@@ -271,12 +180,11 @@ int main(){
 	}	 
 
 
-		mvmcolmap();
 	}
 
 
 
-	mappacasaspawn();
+	spawn(mappacase);
 
 	y = 2;
 	x = 1;
@@ -284,26 +192,46 @@ int main(){
 	while(true){
 
 
-		mvmcolmapcas();
+		mvmcolmap(mappacase);
+	
+
+
 
 		if(x == 1 && y == 1){
 			clear();
 			x = 1;
 			y = 19;
-			labirinto();
+			spawn(mappa);
 			refresh();
 			mvaddch(y, x, '@');
 			while(true){
-				mvmcolmap();
-					if(x == 1 && y == 20){
+				mvmcolmap(mappa);
+					if(x == 1 && y == 19){
 						clear();
-						mappacasaspawn();
+						spawn(mappacase);
 						x = 1;
 						y = 1;
 						mvaddch(y, x, '@');				
 						break;
 					}	 
 			}
+		/*	if(mappacase[y][x] == 3){
+				clear();
+				spawn(mappahouse);
+				x = 19;
+				y = 1;
+				mvaddch(y, x, '@');
+				refresh();
+				while(true){
+					mvmcolmap(mappahouse);
+					if(x == 20 && y == 1)break;
+
+
+				} 
+
+
+				
+			}*/
 		}    
 
 
