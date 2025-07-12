@@ -34,11 +34,11 @@ brew install ncurses
 
 ### Installation
 
-1. **Clone the repository:**
+1. **Clone repository**
 ```bash
 git clone https://github.com/gio236/projects-c.git
 cd projects-c
-git checkout little-game-in-c++
+git checkout Viarium
 ```
 
 2. **Compile the game:**
@@ -74,25 +74,10 @@ The game is structured with:
 - **Optimized rendering**: Efficient screen updates
 - **Input handling**: Robust user command management
 
-## 🛠️ Code Structure
-
-```
-little-game-in-c++/
-├── main.cpp            # Main file with game loop
-├── README.md           # This file
-└── screenshots/        # Game screenshots (optional)
-```
-
-### Main Functions
-
-- `labirinto()` - Renders the main maze
-- `mappacasaspawn()` - Renders the house map
-- `mvmcolmap()` - Handles movement with collision detection
-- `mvmcolmapcas()` - Handles movement in the house area
-
+`
 ## 🎯 Roadmap
 
-- [ ] **Room System**: Implement interior rooms for each house
+- [x] **Room System**: Implement interior rooms for each house
 - [ ] **Inventory**: Object collection system
 - [ ] **NPCs**: Non-player characters with dialogues
 - [ ] **Save System**: Game progress persistence
