@@ -1,6 +1,5 @@
-# 🎮 Terminal Maze Adventure
-
-An interactive maze game developed in C++ using the ncurses library. Navigate through multiple interconnected mazes, explore houses, and discover new areas in this engaging terminal-based adventure!
+# 🎮 Viarium
+An interactive maze game developed in C++ using the ncurses library . Navigate through multiple interconnected mazes, explore houses, and discover new areas in this engaging terminal-based adventure!
 
 ## ✨ Features
 
