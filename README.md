@@ -3,6 +3,8 @@
 I'm **Gioele**, a 15-year-old student currently attending an IT technical high school (ITIS).  
 I'm passionate about **computer science**, especially **Linux** and everything related to open-source technologies.
 
+## you can find the projects in the other branch
+
 ## 🖥️ My Setup
 - 💻 Operating System: **arch**
 - 🪟 Window Manager: **sway**
